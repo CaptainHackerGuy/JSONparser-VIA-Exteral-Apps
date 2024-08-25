@@ -69,6 +69,90 @@ Example:
 ```
 Note: these arent actual values adjust the values to the usecases of your website.
 
+```javascript
+const fs = require('fs');
+const path = './data.json'; // Path to the JSON file
+
+/**
+ * Log user data to the data.json file.
+ * @param {string} user - The username.
+ * @param {number} money - The amount of money.
+ * @param {number} kills - The number of kills.
+ * @param {number} friends - The number of friends.
+ */
+function logUserData(user, money, kills, friends) {
+    // Read the existing data from the JSON file
+    fs.readFile(path, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return;
+        }
+
+        let jsonData;
+        try {
+            jsonData = JSON.parse(data);
+        } catch (e) {
+            console.error('Error parsing JSON:', e);
+            return;
+        }
+
+        // Add new user data
+        jsonData[user] = {
+            money: money,
+            kills: kills,
+            friends: friends
+        };
+
+        // Write the updated data back to the file
+        fs.writeFile(path, JSON.stringify(jsonData, null, 4), 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing to the file:', err);
+                return;
+            }
+            console.log('User data added successfully.');
+        });
+    });
+}
+
+// Example usage:
+logUserData('newuser', 150, 10, 50);
+```
+
+Here is some example code you can edit the values from instead of money to like deaths or something! Add this to my javascript code then use:
+
+```javascript
+logUserData(displayname, <val1>, <val2>, <val3>)
+```
+
+You can add/remove values if you want its your choice!
+
+```javascript
+
+jsonData[user] = {
+    money: money,
+    kills: kills,
+    friends: friends,
+    lives: lives,
+    gems: gems
+};
+
+```
+
+Note: These values use variables you can change them to strings/integers like:
+
+```javascript
+
+jsonData["Noxious"] = {
+    money: 288,
+    kills: 3,
+    friends: "Dragon",
+    lives: 2,
+    gems: 123
+};
+
+```
+Feel free to add more values to your liking...
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/CaptainHackerGuy/RobloxAuthentication?tab=MIT-1-ov-file) file for details.
