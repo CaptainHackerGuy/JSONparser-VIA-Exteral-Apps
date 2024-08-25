@@ -131,7 +131,7 @@ function parseJSON(input, filePath) {
 Here is my `Module Code` you can edit the code for it but please leave credit you can also install it (tutorial provided below)! Add this to my javascript code then use:
 
 ```javascript
-logUserData("user: captainhackerguy, skins: 1", "./data.json")
+parseJSON("user: captainhackerguy, skins: 1", "./data.json")
 ```
 
 You can `add/remove values` if you want its your choice!
