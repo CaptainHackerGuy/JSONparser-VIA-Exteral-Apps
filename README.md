@@ -177,12 +177,16 @@ install using
 npm i loguser-data
 ```
 
+**Setting Up a .json File: ** Create a file with the .json extention and then type {} in it and its done! 
+While running parseJSON("", <filepath>) give the file directory in the 2nd value and your good to go!
+
 usage:
 ```javascript
-parseJSON("user: captainhackerguy, val1: value, val2: value") // You can add an infinite amount of values. Make sure to use user at the start or else it will appear as undefined.
+parseJSON("user: captainhackerguy, val1: value, val2: value", path) // You can add an infinite amount of values. Make sure to use user at the start or else it will appear as undefined.
 ```
+
 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/CaptainHackerGuy/RobloxAuthentication?tab=MIT-1-ov-file) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/CaptainHackerGuy/JSONparser-VIA-Exteral-Apps#LICENSE) file for details.
