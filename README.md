@@ -48,7 +48,7 @@ Feel free to fork the repository and make improvements. If you have suggestions 
 # Changes
 
 `You can add this to your own website` but please leave credit. You can modify the code and connect it to your dashboard etc. Change the style according to your feeling.
-create variables to store the userdata and using JSONs are strongly reccomended for datastorage
+create variables to store the userdata and using JSONs are strongly reccomended for datastorage instead of usernames and passwords, As it is already done using roblox.
 
 Example:
 
