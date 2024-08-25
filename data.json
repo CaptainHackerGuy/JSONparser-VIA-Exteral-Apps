@@ -1,0 +1,13 @@
+{
+    "exampleuser": {
+        "money" : 100,
+        "kills": 34,
+        "friends": 200
+    },
+
+    "exampleuser2": {
+        "money" : 382,
+        "kills": 68,
+        "friends": 37
+    }
+}
