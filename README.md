@@ -177,7 +177,7 @@ install using
 npm i loguser-data
 ```
 
-**Setting Up a .json File: ** Create a file with the .json extention and then type {} in it and its done! 
+**Setting Up a .json File:** Create a file with the .json extention and then type {} in it and its done! 
 While running parseJSON("", <filepath>) give the file directory in the 2nd value and your good to go!
 
 usage:
