@@ -46,7 +46,7 @@ Welcome to the **Roblox Authentication** project, a simple yet effective solutio
 
 Feel free to fork the repository and make improvements. If you have suggestions or find bugs, please open an issue or submit a pull request.
 
-# Changes
+## Changes
 
 You can add this to your own website but please leave credit. You can modify the code and connect it to your dashboard etc. Change the style according to your preference.
 Create variables to store the userdata, and using JSON is strongly recommended for data storage instead of usernames and passwords, as it is already done using Roblox.
@@ -166,6 +166,22 @@ jsonData["Noxious"] = {
 
 ```
 Feel free to add more values to your liking...
+
+
+## Package
+
+--npm package added
+install using
+
+```bash
+npm install log-user-data
+```
+
+usage:
+```javascript
+logUserData("user: captainhackerguy, val1: value, val2: value") // You can add an infinite amount of values. Make sure to use user at the start or else it will appear as undefined.
+```
+
 
 ## License
 
