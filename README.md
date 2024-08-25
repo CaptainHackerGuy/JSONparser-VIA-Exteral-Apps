@@ -44,3 +44,27 @@ Welcome to the **Roblox Authentication** project, a simple yet effective solutio
 ## Contributing
 
 Feel free to fork the repository and make improvements. If you have suggestions or find bugs, please open an issue or submit a pull request.
+
+# Changes
+
+`You can add this to your own website` but please leave credit. You can modify the code and connect it to your dashboard etc. Change the style according to your feeling.
+create variables to store the userdata and using JSONs are strongly reccomended for datastorage
+
+Example:
+
+```json
+{
+    "exampleuser": {
+        "money" : 100,
+        "kills": 34,
+        "friends": 200
+    },
+
+    "exampleuser2": {
+        "money" : 382,
+        "kills": 68,
+        "friends": 37
+    }
+}
+```
+Note: these arent actual values adjust the values to the usecases of your website.
