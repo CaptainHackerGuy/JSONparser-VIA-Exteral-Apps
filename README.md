@@ -72,18 +72,34 @@ Note: these aren't actual values; adjust the values to the use cases of your web
 
 ```javascript
 const fs = require('fs');
-const path = './data.json'; // Path to the JSON file
+const path = './data.json'; // Default path to the JSON file change it to your liking
 
 /**
  * Log user data to the data.json file.
- * @param {string} user - The username.
- * @param {number} money - The amount of money.
- * @param {number} kills - The number of kills.
- * @param {number} friends - The number of friends.
+ * @param {string} input - The input string containing key-value pairs.
+ * @param {string} filePath - Optional custom path to the JSON file.
  */
-function logUserData(user, money, kills, friends) {
+function parseJSON(input, filePath) {
+    console.log(`-----------------------------\nHello user, You are using parseJSON! Kindly change the constant 'path' to your desired path.\nYour current path is set to ${path}\n-----------------------------\n\n\n`)
+    // Parse the input string into an object
+    const keyValuePairs = input.split(',').reduce((acc, pair) => {
+        let [key, value] = pair.split(':').map(str => str.trim());
+
+        // Convert "true"/"false" strings to boolean values and numeric strings to numbers
+        if (value.toLowerCase() === 'true') value = true;
+        else if (value.toLowerCase() === 'false') value = false;
+        else if (!isNaN(value)) value = parseFloat(value);
+
+        acc[key] = value;
+        return acc;
+    }, {});
+
+    // Extract the user identifier from the parsed object
+    const user = keyValuePairs['user'];
+    delete keyValuePairs['user']; // Remove 'user' from the object to keep other data
+
     // Read the existing data from the JSON file
-    fs.readFile(path, 'utf8', (err, data) => {
+    fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading the file:', err);
             return;
@@ -97,81 +113,50 @@ function logUserData(user, money, kills, friends) {
             return;
         }
 
-        // Add new user data
-        jsonData[user] = {
-            money: money,
-            kills: kills,
-            friends: friends
-        };
+        // Add or update user data
+        jsonData[user] = keyValuePairs;
 
         // Write the updated data back to the file
-        fs.writeFile(path, JSON.stringify(jsonData, null, 4), 'utf8', (err) => {
+        fs.writeFile(filePath, JSON.stringify(jsonData, null, 4), 'utf8', (err) => {
             if (err) {
                 console.error('Error writing to the file:', err);
                 return;
             }
-            console.log('User data added successfully.');
+            console.log(`-----------------------------\nUser data added/updated successfully.\nLogs {\n  Update: "Modified ${path}\n  key="undefined"\n}\n-----------------------------\n\n\n`)
         });
     });
 }
-
-// Example usage:
-logUserData('newuser', 150, 10, 50);
 ```
 
-Here is some `example code` you can edit the values from instead of money to like deaths or something! Add this to my javascript code then use:
+Here is my `Module Code` you can edit the code for it but please leave credit you can also install it (tutorial provided below)! Add this to my javascript code then use:
 
 ```javascript
-logUserData(displayname, <val1>, <val2>, <val3>)
+logUserData("user: captainhackerguy, skins: 1", "./data.json")
 ```
 
 You can `add/remove values` if you want its your choice!
-
-To add values modify the function definition and calling:
-I have added a new value "lives" here!
-
-```javascript
-function logUserData(user, money, kills, friends, lives) {
-    // <no changes here>
-}
-
-logUserData("dragon", 12312, 23, 200, 20)
-```
 
 Fun fact: You can use the `Roblox API` (examples in [index.html](https://github.com/CaptainHackerGuy/RobloxAuthentication/blob/main/index.html)) to import all the friends and friend count! I'm using this for JSONs, you can mess around with it if you want.
 
 ```javascript
 
-jsonData[user] = {
-    money: money,
-    kills: kills,
-    friends: friends,
-    lives: lives,
-    gems: gems
-};
+parseJSON("user: dr, optic: halov2", "./data2.json")
 
 ```
 
-Note: These values use `variables` you can change them to `strings/integers` like:
+Note: These values use `strings` you can change them to `booleans/integers/varables` like:
 
 ```javascript
 
-jsonData["Noxious"] = {
-    money: 288,
-    kills: 3,
-    friends: "Dragon",
-    lives: 2,
-    gems: 123
-};
+parseJSON(`user: ${username}, gems: ${gems}, dead: False`) // Examples of Integers/Variables/Booleans
 
 ```
 Feel free to add more values to your liking...
 
 
-## Package
+## Package Installation
 
---npm package added
-install using
+**Head over to terminal and type:**
 
 ```bash
 npm i loguser-data
