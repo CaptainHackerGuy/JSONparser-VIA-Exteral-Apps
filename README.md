@@ -68,3 +68,7 @@ Example:
 }
 ```
 Note: these arent actual values adjust the values to the usecases of your website.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/CaptainHackerGuy/RobloxAuthentication/blob/main/LICENSE) file for details.
