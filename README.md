@@ -118,13 +118,26 @@ function logUserData(user, money, kills, friends) {
 logUserData('newuser', 150, 10, 50);
 ```
 
-Here is some example code you can edit the values from instead of money to like deaths or something! Add this to my javascript code then use:
+Here is some `example code` you can edit the values from instead of money to like deaths or something! Add this to my javascript code then use:
 
 ```javascript
 logUserData(displayname, <val1>, <val2>, <val3>)
 ```
 
-You can add/remove values if you want its your choice!
+You can `add/remove values` if you want its your choice!
+
+To add values modify the function definition and calling:
+I have added a new value "lives" here!
+
+```javascript
+function logUserData(user, money, kills, friends, lives) {
+    // <no changes here>
+}
+
+logUserData("dragon", 12312, 23, 200, 20)
+```
+
+Fun fact: You can use the `Roblox API` (examples in [index.html](https://github.com/CaptainHackerGuy/RobloxAuthentication/blob/main/index.html)) to import all the friends and friendcount! Im using this for JSONs you can mess around with it if you want.
 
 ```javascript
 
@@ -138,7 +151,7 @@ jsonData[user] = {
 
 ```
 
-Note: These values use variables you can change them to strings/integers like:
+Note: These values use `variables` you can change them to `strings/integers` like:
 
 ```javascript
 
