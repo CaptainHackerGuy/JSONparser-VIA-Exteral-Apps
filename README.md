@@ -1,3 +1,4 @@
+
 # Roblox Authentication
 
 ## Overview
@@ -47,8 +48,8 @@ Feel free to fork the repository and make improvements. If you have suggestions 
 
 # Changes
 
-`You can add this to your own website` but please leave credit. You can modify the code and connect it to your dashboard etc. Change the style according to your feeling.
-create variables to store the userdata and using JSONs are strongly reccomended for datastorage instead of usernames and passwords, As it is already done using roblox.
+You can add this to your own website but please leave credit. You can modify the code and connect it to your dashboard etc. Change the style according to your preference.
+Create variables to store the userdata, and using JSON is strongly recommended for data storage instead of usernames and passwords, as it is already done using Roblox.
 
 Example:
 
@@ -67,7 +68,7 @@ Example:
     }
 }
 ```
-Note: these arent actual values adjust the values to the usecases of your website.
+Note: these aren't actual values; adjust the values to the use cases of your website.
 
 ```javascript
 const fs = require('fs');
@@ -137,7 +138,7 @@ function logUserData(user, money, kills, friends, lives) {
 logUserData("dragon", 12312, 23, 200, 20)
 ```
 
-Fun fact: You can use the `Roblox API` (examples in [index.html](https://github.com/CaptainHackerGuy/RobloxAuthentication/blob/main/index.html)) to import all the friends and friendcount! Im using this for JSONs you can mess around with it if you want.
+Fun fact: You can use the `Roblox API` (examples in [index.html](https://github.com/CaptainHackerGuy/RobloxAuthentication/blob/main/index.html)) to import all the friends and friend count! I'm using this for JSONs, you can mess around with it if you want.
 
 ```javascript
 
