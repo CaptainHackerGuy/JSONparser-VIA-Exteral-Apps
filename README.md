@@ -1,9 +1,9 @@
 
-# Roblox Authentication
+# Roblox Authentication / Use any Service
 
 ## Overview
 
-Welcome to the **Roblox Authentication** project, a simple yet effective solution for verifying Roblox users without the need for expensive databases or secure storage systems. This tool is designed for hobbyists and developers who need a straightforward way to authenticate users based on their Roblox account information.
+Welcome to the **JSONparser** project, a simple yet effective solution for verifying Roblox users without the need for expensive databases or secure storage systems. This tool is designed for hobbyists and developers who need a straightforward way to authenticate users based on their Roblox account information.
 
 ## Features
 
@@ -174,12 +174,12 @@ Feel free to add more values to your liking...
 install using
 
 ```bash
-npm install log-user-data
+npm i loguser-data
 ```
 
 usage:
 ```javascript
-logUserData("user: captainhackerguy, val1: value, val2: value") // You can add an infinite amount of values. Make sure to use user at the start or else it will appear as undefined.
+parseJSON("user: captainhackerguy, val1: value, val2: value") // You can add an infinite amount of values. Make sure to use user at the start or else it will appear as undefined.
 ```
 
 
